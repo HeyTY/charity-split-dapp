@@ -40,7 +40,7 @@ contract charitySplit {
         
         uint amountAllocated = totalReceived/charities.length;
         uint amountWithdrawn = withdrawnAmounts[msg.sender];
-        uint amount = amountAllocated = amountWithdrawn;
+        uint amount = amountAllocated - amountWithdrawn;
         withdrawnAmounts[msg.sender] = amountWithdrawn + amount;
         
         if (amount > 0) {
